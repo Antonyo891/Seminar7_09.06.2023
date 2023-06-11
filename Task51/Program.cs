@@ -33,7 +33,8 @@ void PrintArray (int [,] array)
 int SumDiagonal(int[,] array)
 {
     int result = 0;
-    for (int i = 0; i<array.GetLength(0); i++) result = result + array[i,i];
+    int length = array.GetLength(0)<array.GetLength(1) ? array.GetLength(0):array.GetLength(1);
+    for (int i = 0; i<length; i++) result = result + array[i,i];
     return result;
 }
 Clear();
